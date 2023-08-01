@@ -67,5 +67,5 @@ func TestContextWithCancel(t *testing.T) {
 		}
 	}
 
-	fmt.Println("Total gorouutine", runtime.NumGoroutine())
+	fmt.Println("Total Goroutine", runtime.NumGoroutine())
 }
