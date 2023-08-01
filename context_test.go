@@ -8,6 +8,7 @@ import (
 	"time"
 )
 
+// Pengenalan Context
 func TestContext(t *testing.T) {
 	background := context.Background()
 	fmt.Println(background)
@@ -16,6 +17,8 @@ func TestContext(t *testing.T) {
 	fmt.Println(todo)
 }
 
+// parent dan child context
+// context with value
 func TestContextWithValue(t *testing.T) {
 	contextA := context.Background()
 
@@ -42,6 +45,7 @@ func TestContextWithValue(t *testing.T) {
 
 }
 
+// context with cancel
 func CreateCounter(ctx context.Context) chan int {
 	destination := make(chan int)
 
@@ -87,6 +91,7 @@ func TestContextWithCancel(t *testing.T) {
 	fmt.Println("Total Goroutine", runtime.NumGoroutine())
 }
 
+// context with time out
 func TestContextWithTimeOut(t *testing.T) {
 	fmt.Println("Total Goroutine", runtime.NumGoroutine())
 
@@ -109,6 +114,7 @@ func TestContextWithTimeOut(t *testing.T) {
 	fmt.Println("Total Goroutine", runtime.NumGoroutine())
 }
 
+// context with deadline
 func TestContextWithDeadline(t *testing.T) {
 	fmt.Println("Total Goroutine", runtime.NumGoroutine())
 
